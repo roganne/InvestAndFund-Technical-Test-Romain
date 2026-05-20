@@ -1,0 +1,16 @@
+@InvestAndFund.Developer.Test.Api_HostAddress = http://localhost:5297
+
+### Process Order with Card Payment
+POST {{InvestAndFund.Developer.Test.Api_HostAddress}}/orders
+Content-Type: application/json
+
+{
+  "order": {
+    "amount": 100.00,
+    "customerType": "VIP",
+    "customerEmail": "customer@example.com",
+    "cardNumber": "4111111111111111",
+    "bankAccount": null
+  },
+  "paymentType": "Card"
+}
