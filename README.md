@@ -17,8 +17,13 @@ Refactor the existing code to:
 - Support the new `Loyal` customer type cleanly, described below.
 
 You **do not** need to redesign the entire system. Focus on **high‑value improvements** that reduce risk and improve changeability.
+## New Requirement 
+A new customer type is being introduced:
 
-Please be prepared to **explain your reasoning**, trade‑offs, and design decisions.
+- CustomerType = Loyal
+- Loyal customers receive a 50% discount
+
+This change must be added without increasing risk or making the code harder to maintain.
 
 ## Explicit Out of Scope
 

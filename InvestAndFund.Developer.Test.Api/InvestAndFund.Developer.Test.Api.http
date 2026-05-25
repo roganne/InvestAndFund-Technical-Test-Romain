@@ -14,3 +14,33 @@ Content-Type: application/json
   },
   "paymentType": "Card"
 }
+
+### Process Order with Bank Transfer
+POST {{InvestAndFund.Developer.Test.Api_HostAddress}}/orders
+Content-Type: application/json
+
+{
+  "order": {
+    "amount": 200.00,
+    "customerType": "Loyal",
+    "customerEmail": "customer@example.com",
+    "cardNumber": "4111111111111111",
+    "bankAccount": null
+  },
+  "paymentType": "BankTransfer"
+}
+
+### Process Order with wrong Bank Transfer
+POST {{InvestAndFund.Developer.Test.Api_HostAddress}}/orders
+Content-Type: application/json
+
+{
+  "order": {
+    "amount": 200.00,
+    "customerType": "r",
+    "customerEmail": "customer@example.com",
+    "cardNumber": "4111111111111111",
+    "bankAccount": null
+  },
+  "paymentType": "Other"
+}
